@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?1lv3na');
+    src: url('../ fonts/icomoon.eot?1lv3na#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?1lv3na') format('truetype'),
+        url('../fonts/icomoon.woff?1lv3na') format('woff'),
+        url('../fonts/icomoon.svg?1lv3na#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航栏 */
+.shortcut {
+    height: 30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+    float: left;
+
+}
+
+/* 偶数格子前加 | ，实线多个格子之间竖线分割 */
+.shortcut .fr ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 15px 0;
+}
+
+.arrow-icon::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    margin-left: 6px;
+}
+
+/* .fr ul li:nth-child(even)::before {
+    content: "|";
+    margin: 9px 10px;
+} */
+
+.header {
+    height: 105px;
+    position: relative;
+    /* 相对定位，为内部logo和购物车提供定位锚点 */
+    background-color: #f1f1f1;
+}
+
+.logo {
+    /* 上下居中对齐 */
+    position: absolute;
+    top: 25px;
+    /* top定位不可以用 cal函数 */
+    /* top: calc(50%-30px); */
+    width: 170px;
+    height: 60px;
+    background: url(//images/logo.png) no-repeat;
+}
+
+.logo a {
+    display: block;
+    width: 171px;
+    height: 61px;
+    background: url(../images/logo.png) no-repeat;
+    font-size: 0;
+}
+
+/* search搜索模块 */
+.search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    /* margin: 35px auto; */
+    /* margin会和相对定位所排斥，外边距最终会落于上一个header盒子，而非父盒子 */
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191b;
+}
+
+.search input {
+    float: left;
+    padding-left: 10px;
+    width: 454px;
+    height: 32px;
+}
+
+.search button {
+    float: left;
+    width: 80px;
+    height: 32px;
+    color: #ffffff;
+    background-color: #b1191b;
+}
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+    /* 因为是通过绝对定位进行位置布局，所以没法使用浮动取消ul>li 的上下属性 */
+}
+
+.hotwords ul li {
+    display: inline-block;
+}
+
+.hotwords a {
+    margin: 0 10px;
+    font-size: 12px;
+}

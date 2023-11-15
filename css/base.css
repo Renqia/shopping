@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 去除内外边距 */
+    box-sizing: border-box;
+    /* 修改盒子大小判断基础为根据实际边界限定 */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+button,
+input {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去除默认边框于选中蓝色边 */
+    border: 0;
+    outline: none;
+}
